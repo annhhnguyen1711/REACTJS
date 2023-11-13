@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./ReactHooks/reportWebVitals";
-import Login from "./components/Login";
+
 //Nhớ lỗi chính tả
 //viết đuôi folder import đầy đủ
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* {<App /> */}
-    <Login></Login>
+    <App />
+    {/* <Login></Login> */}
   </React.StrictMode>
 );
 
