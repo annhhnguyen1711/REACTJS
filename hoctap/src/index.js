@@ -6,6 +6,7 @@ import MyAppWithProps from "./components/MyAppWithProps";
 import RegistrationForm from "./components/RegisterForm";
 
 import reportWebVitals from "./ReactHooks/reportWebVitals";
+import Counter from "./components/reactdev/counter(number)";
 
 //Nhớ lỗi chính tả
 //viết đuôi folder import đầy đủ
@@ -55,7 +56,8 @@ root.render(
     {/* <App />*/}
     {/* {<Test />} */}
     {/* <MyAppWithProps></MyAppWithProps> */}
-    <RegistrationForm></RegistrationForm>
+    {/* <RegistrationForm></RegistrationForm> */}
+    <Counter></Counter>
   </React.StrictMode>
 );
 

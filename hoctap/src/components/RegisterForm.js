@@ -1,46 +1,46 @@
-import React, { useState } from "react";
+import { func } from "prop-types";
+import React, { Component, useState } from "react";
 
 function RegistrationForm() {
-  //kiểm soát hành vi cảu các thành phần trong form
-  //Thông qua "useState components"
-  const [input, setInput] = useState({});
+  // kiểm soát hành vi của các thành phần trong form
+  // Thông qua "useState components"
+  const [inputs, setInput] = useState({});
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     console.log(name);
     console.log(value);
-    setInput((value) => ({ value, [name]: value }));
+    setInput((values) => ({ ...values, [name]: value }));
   };
   const handleSubmit = (event) => {
-    //kiểm soát bất đồng bộ sự kiênk
-    //đảm bảo các sự kiện  Không diễ ra đông thời
-    event.prevenDefaul();
-    console.log(input);
+    // Kiểm soát bất đồng bộ sự kiện
+    // Đảm bảo các sự kiện KHÔNG diễn ra đồng thời
+    event.preventDefault();
+    console.log(inputs);
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Enter your Name:
+          Enter your Name:{" "}
           <input
             type="text"
             name="username"
-            value={input.userName || ""}
+            value={inputs.username || ""}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Enter your age:
+          Enter your Age:{" "}
           <input
             type="number"
             name="age"
-            value={input.age || ""}
+            value={inputs.age || ""}
             onChange={handleChange}
           />
         </label>
-
         <br />
         <input type="submit" />
       </form>
