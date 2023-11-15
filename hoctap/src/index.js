@@ -8,6 +8,7 @@ import RegistrationForm from "./components/RegisterForm";
 import reportWebVitals from "./ReactHooks/reportWebVitals";
 import Counter from "./components/reactdev/counter(number)";
 import MyInput from "./components/reactdev/string";
+import MyCheckbox from "./components/reactdev/Checkbox(boolean)";
 
 //Nhớ lỗi chính tả
 //viết đuôi folder import đầy đủ
@@ -59,7 +60,8 @@ root.render(
     {/* <MyAppWithProps></MyAppWithProps> */}
     {/* <RegistrationForm></RegistrationForm> */}
     {/* <Counter> </Counter> */}
-    <MyInput></MyInput>
+    {/* <MyInput></MyInput> */}
+    <MyCheckbox></MyCheckbox>
   </React.StrictMode>
 );
 
