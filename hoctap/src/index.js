@@ -10,6 +10,7 @@ import Counter from "./components/reactdev/counter(number)";
 import MyInput from "./components/reactdev/string";
 import MyCheckbox from "./components/reactdev/Checkbox(boolean)";
 import Form from "./components/reactdev/Form(two variables) ";
+import Passing from "./components/reactdev/Passingthe";
 
 //Nhớ lỗi chính tả
 //viết đuôi folder import đầy đủ
@@ -63,6 +64,8 @@ root.render(
     {/* <Counter> </Counter> */}
     {/* <MyInput></MyInput> */}
     {/* <MyCheckbox></MyCheckbox> */}
+    {/* <Form></Form> */}
+    <Passing />
   </React.StrictMode>
 );
 
