@@ -9,6 +9,7 @@ import reportWebVitals from "./ReactHooks/reportWebVitals";
 import Counter from "./components/reactdev/counter(number)";
 import MyInput from "./components/reactdev/string";
 import MyCheckbox from "./components/reactdev/Checkbox(boolean)";
+import Form from "./components/reactdev/Form(two variables) ";
 
 //Nhớ lỗi chính tả
 //viết đuôi folder import đầy đủ
@@ -61,7 +62,7 @@ root.render(
     {/* <RegistrationForm></RegistrationForm> */}
     {/* <Counter> </Counter> */}
     {/* <MyInput></MyInput> */}
-    <MyCheckbox></MyCheckbox>
+    {/* <MyCheckbox></MyCheckbox> */}
   </React.StrictMode>
 );
 
