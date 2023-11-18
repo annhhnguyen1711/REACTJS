@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import "./index.css";
+import "./style.css";
 import App from "./App";
 import MyAppWithProps from "./components/MyAppWithProps";
 import RegistrationForm from "./components/RegisterForm";
@@ -68,7 +69,7 @@ root.render(
     {/* <Form></Form> */}
     {/* <Passing /> */}
     {/* <RegistrationForm /> */}
-    <App />
+    {/* <App /> */}
   </React.StrictMode>
 );
 
