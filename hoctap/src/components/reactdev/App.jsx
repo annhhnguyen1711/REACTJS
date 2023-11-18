@@ -11,8 +11,7 @@ function App(){
         <div>
             <h1>{headingText}</h1>
             <button
-            onClick={handleClick}
-            
+            onClick={handleClick}>Submit</button>
         </div>
     );
 
