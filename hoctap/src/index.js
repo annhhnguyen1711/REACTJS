@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-// import App from "./App";
+// import "./index.css";
+import App from "./App";
 import MyAppWithProps from "./components/MyAppWithProps";
 import RegistrationForm from "./components/RegisterForm";
 
@@ -11,7 +11,7 @@ import MyInput from "./components/reactdev/string";
 import MyCheckbox from "./components/reactdev/Checkbox(boolean)";
 import Form from "./components/reactdev/Form(two variables) ";
 import Passing from "./components/reactdev/Passingthe";
-import App from "./components/reactdev/App";
+// import App from "./components/reactdev/App";
 
 //Nhớ lỗi chính tả
 //viết đuôi folder import đầy đủ
@@ -58,7 +58,7 @@ import App from "./components/reactdev/App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App />*/}
+    <App />
     {/* {<Test />} */}
     {/* <MyAppWithProps></MyAppWithProps> */}
     {/* <RegistrationForm></RegistrationForm> */}
