@@ -7,9 +7,16 @@ import Button from "./Button";
 import validateEmail from "./ultils";
 
 export default function App() {
+  function handleEmailInput() {
+    const [email, setEmail] = useState({
+      value: "",
+      isTouch: false,
+      isValid: false,
+    });
+  }
   return (
     <div className="App">
-      <input
+      <Input
         name="email"
         type="text"
         lang="Email"
