@@ -1,4 +1,4 @@
-Bexport default function Button(props){
+export default function Button(props){
 
     return(
         <Button
