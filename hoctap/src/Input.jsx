@@ -4,7 +4,7 @@ export default function Input(props){
     return(
 
         <div
-         className={'input-group ${!props.isValid && props,isTouched? "invalid": }'}
+         className={'input-group ${!props.isValid && props,isTouched? "invalid": "" }'}
          >
         </div>
     );
