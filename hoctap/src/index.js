@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import App from "./App";
 import FetchExample from "./components/FetchExample";
+import AxiosExample from "./components/AxiosExample";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);

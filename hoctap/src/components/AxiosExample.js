@@ -11,7 +11,9 @@ function AxiosExample() {
         setData(Response.data);
       })
       .catch((error) => console.error(error));
-  }, []);
-  return <ul></ul>;
+  },[]);
+  return <ul>
+        {data.map(data => (<li key={})) }
+  </ul>;
 }
 export default AxiosExample;
