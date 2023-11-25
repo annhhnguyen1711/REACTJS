@@ -11,7 +11,7 @@ function AxiosExample() {
         setData(Response.data);
       })
       .catch((error) => console.error(error));
-  });
+  }, []);
   return <ul></ul>;
 }
 export default AxiosExample;
