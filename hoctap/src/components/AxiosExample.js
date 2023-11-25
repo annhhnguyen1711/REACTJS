@@ -11,9 +11,13 @@ function AxiosExample() {
         setData(Response.data);
       })
       .catch((error) => console.error(error));
-  },[]);
-  return <ul>
-        {data.map(data => (<li key={})) }
-  </ul>;
+  }, []);
+  return (
+    <ul>
+      {data.map((data) => (
+        <li key={data.id}>{data.name}</li>
+      ))}
+    </ul>
+  );
 }
 export default AxiosExample;

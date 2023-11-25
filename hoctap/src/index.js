@@ -12,6 +12,7 @@ root.render(
   <StrictMode>
     {/* <App /> */}
     {/* <XmlHttpExample></XmlHttpExample> */}
-    <FetchExample></FetchExample>
+    {/* <FetchExample></FetchExample> */}
+    <AxiosExample></AxiosExample>
   </StrictMode>
 );
