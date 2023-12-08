@@ -1,99 +1,99 @@
-import logo from "./logo.svg";
-import "./App.css";
-import "./slot2.css";
-// import Product from "./product";
-import { useState } from "react";
-import Input from "./Input";
-import Button from "./Button.jsx";
-import validateEmail from "./ultils.js";
+// import "./style.css";
+// import React from "react"
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
+import { CiCirclePlus } from "react-icons/ci";
 
-export default function App() {
-  const [email, setEmail] = useState({
-    value: "",
-    isTouched: false,
-    isValid: false,
-  });
-  const [pwd, setPwd] = useState({
-    value: "",
-    isTouched: false,
-    isValid: false,
-  });
-  const [confirmPwd, setConfirmPwd] = useState({
-    value: "",
-    isTouched: false,
-    isValid: false,
-  });
-  function handleEmailInput(e) {
-    setEmail({
-      isTouched: true,
-      value: e.target.value,
-      isValid: validateEmail(e.target.value),
-    });
-  }
-  function handlePwdInput(e) {
-    setPwd({
-      isTouched: true,
-      value: e.target.value,
-      isValid: e.target.value.lenght >= 6 ? true : false,
-    });
-  }
-  function handleConfirmPwdInput(e) {
-    setConfirmPwd({
-      isTouched: true,
-      value: e.target.value,
-      isValid: e.target.value === pwd.value ? true : false,
-    });
-  }
-  function handleSubmit(e) {
+const App = () => {
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+  const [favorite, setFavorite] = useState(false);
+  const [search, setSearch] = useState("");
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    window.alert(
-      `Submitted: \n Email: ${email.value} \n Password: ${pwd.value}`
-    );
-  }
-  const formIsValid = email.isValid && pwd.isValid && confirmPwd.isValid;
+    setTitle("");
+    setAuthor("");
+    setFavorite(false);
+    setSearch("");
+  };
 
   return (
     <div className="App">
-      <div className="form-container">
-        <Input
-          name="email"
+      <label className="search">
+        <FaSearch />
+        <input
           type="text"
-          label="Email"
-          onChange={handleEmailInput}
-          isValid={email.isValid}
-          isTouched={email.isTouched}
-          placeholder="Email..."
-          value={email.value}
-          errorMng="Enter valid email"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
-        <Input
-          name="password"
-          type="password"
-          label="password"
-          onChange={handlePwdInput}
-          isValid={pwd.isValid}
-          isTouched={pwd.isTouched}
-          placeholder="password..."
-          value={pwd.value}
-          errorMng="Minimum 6 characters"
-        />
-        <Input
-          name="confirmPwd"
-          type="password"
-          label="Confirm password"
-          onChange={handleConfirmPwdInput}
-          isValid={confirmPwd.isValid}
-          isTouched={confirmPwd.isTouched}
-          placeholder="Confirm password..."
-          value={confirmPwd.value}
-          errorMng="Password do not match!"
-        />
-        <Button
-          text="REGISTER"
-          ocClick={handleSubmit}
-          disabled={!formIsValid}
-        />
+        <br />
+      </label>
+      <div className="form-container">
+        <h1>A list of Books </h1>
+        <label>
+          <p>Life of Pi</p>
+        </label>
+        <label>
+          <FaStar /> <p>Học code today</p>
+        </label>
+        <br />
+        <label>
+          <FaStar /> <p>Learn Angular by example</p>
+        </label>
+        <br />
+        <label>
+          <p>Họ nhà trai</p>
+        </label>
+        <br />
+        <label>
+          <FaStar /> <p>Đôi mắt có lửa</p>
+        </label>
+        <br />
+        <select>
+          <option selected="">Author Ascending</option>
+          <option value="">Author Descending</option>
+        </select>
       </div>
+      <form onSubmit={handleSubmit}>
+        <h1>Add a new Book</h1>
+        <label>
+          Title:
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Author:
+          <input
+            type="text"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Favorite:
+          <input
+            type="checkbox"
+            checked={favorite}
+            onChange={(e) => setFavorite(e.target.checked)}
+          />
+        </label>
+        <br />
+        <button type="submit">
+          <CiCirclePlus />
+          Add
+        </button>
+      </form>
     </div>
   );
-}
+};
+
+export default App;

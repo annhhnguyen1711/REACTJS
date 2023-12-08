@@ -2,17 +2,19 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./App";
-import FetchExample from "./components/FetchExample";
-import AxiosExample from "./components/AxiosExample";
+// import FetchExample from "./components/FetchExample";
+// import AxiosExample from "./components/AxiosExample";
+// import AddBookForm from "./test/booklist";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <XmlHttpExample></XmlHttpExample> */}
     {/* <FetchExample></FetchExample> */}
-    <AxiosExample></AxiosExample>
+    {/* <AxiosExample></AxiosExample> */}
+    {/* <AddBookForm /> */}
   </StrictMode>
 );
